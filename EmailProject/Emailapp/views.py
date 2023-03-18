@@ -29,7 +29,7 @@ def signup(request):
                 user = User.objects.create_user(username=user_name,password = password1,email=email,first_name=firstname,last_name=lastname)
                 user.save();
                 print("user created")
-                return redirect('home')
+                return redirect('index')
     
         else:
             messages.info(request,"passord mismatch")
@@ -54,15 +54,15 @@ def signin(request):
             else:
                 messages.info(request,"Invalid username or password") 
                 print("Invalid username or password")
-                return redirect('home')
+                return redirect('index')
     else:
 
         return render(request,'signin.html')
 
 
 
-def home(request):
-    return render(request,'home.html')
+def index(request):
+    return render(request,'index.html')
 
 def logout(request):
     return render(request,'index.html')
@@ -88,4 +88,4 @@ def Email(request):
     print(email_from)
     
     messages.info(request,"mail sent")
-    return render(request,'home.html')
+    return render(request,'index.html')

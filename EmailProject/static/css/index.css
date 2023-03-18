@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    margin-top: -20px;
+    width: 260px;
+    float: left;
+}
+
+.header-items ul li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-items {
+    float: left;
+    margin: -10px 5px 90px 150px;
+}
+
+.searchbar {
+    font-size: 18px;
+    height: 66px;
+    width: 800px;
+    padding: 12px 20px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.logoutbtn {
+    margin: 85px 50px 0px 0px;
+    background-color: rgb(77, 83, 83);
+    text-decoration: none;
+    height: 30px;
+}
+
+.logoutbtn a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 30px;
+}
+
+.settings-icon {
+    margin: 85px 10px 0px 300px;
+}
+
+.account-link {
+    text-decoration: none;
+}
+
+.account-icon {
+    margin: 85px 10px 0px 30px;
+}
+
+.mail-heading {
+    clear: both;
+    background-color: #023047;
+    color: white;
+    font-size: larger;
+}
+
+.mail-heading h2 {
+    margin-left: 20px;
+}
+
+.mail-controls {
+    float: left;
+    margin-top: 30px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.mail-controls-body {
+    float: left;
+}
+
+.mail-control-links {
+    list-style-type: none;
+}
+
+.compose-link {
+    text-align: center;
+    display: block;
+    width: 100px;
+    text-decoration: none;
+    margin: 0px 0px 20px 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    background-color: #023047;
+}
+
+.body-section {
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 100px 0px 20px 800px;
+    text-decoration: none;
+    list-style: none;
+    padding: 20px;
+}
+
+.sendbtn {
+    margin: 20px 0px 20px 20px;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #023047;
+}
+
+.emailinput {
+    font-size: 18px;
+    height: 66px;
+    width: 800px;
+    padding: 12px 30px;
+    display: inline;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .logo {
+        margin: -10px 0px 0px -20px;
+        width: 160px;
+    }
+    .header-items ul li {
+        display: inline-block;
+        text-decoration: none;
+    }
+    .nav-items {
+        float: left;
+        margin: -80px 0px 9px 55px;
+    }
+    .searchbar {
+        margin-top: -160px;
+        font-size: 18px;
+        height: 40px;
+        width: 200px;
+        padding: 6px 10px;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+    }
+    .settings-icon {
+        width: 5px;
+        margin: 8px 10px 0px 3px;
+    }
+    .account-icon {
+        width: 5px;
+        margin: 8px 10px 0px 3px;
+    }
+}

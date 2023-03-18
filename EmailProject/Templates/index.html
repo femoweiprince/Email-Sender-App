@@ -1,0 +1,121 @@
+{% load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Email Sender| Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '\images\Email.png'%}">
+
+
+    <link rel="stylesheet" href="{% static 'css\index.css'%}">
+    <link rel="stylesheet" href="{% static '\fontawesome-free-6.0.0-web\css\all.css'%}">
+</head>
+
+<body>
+
+
+    <nav class="header-items">
+              
+               <div>
+
+                <a class="logo" href="{% url 'signin'%}">
+                    <img class="logo" src="{% static '\images\Email.png'%}" alt="logo">
+                </a>
+          
+        <ul class="nav-items">
+
+            <li>
+                <input class="searchbar"type="text" placeholder=" search mail" name="searchbar">
+            </li> 
+
+           
+        
+            <li>
+                <i class="fa-solid fa-gear fa-2x settings-icon"></i>
+            </li> 
+
+            <li>
+
+                <a class="account-link" href="{% url 'index'%}">
+                    <i class="fa-solid fa-2x fa-user account-icon"></i>
+                </a>
+              
+            </li> 
+        </ul>
+       
+    </nav>
+
+
+
+    <div class="mail-heading">
+        <h2>Welcome Prince</h2>
+    </div>
+
+
+
+
+
+ <section class="mail-controls">
+<div class="mail-controls-body">
+    <ul class="mail-control-links">
+
+        <li>
+            <a class="compose-link" href="{% url 'signin'%}">
+                <i class="fa-solid fa-pen"></i> Compose
+            </a>
+        </li>
+    
+        <li>
+            <a class="compose-link" href="{% url 'signup'%}">
+                <i class="fa-sharp fa-regular fa-paper-plane"> </i>  Sent Mails
+            </a>
+        </li>
+    
+    
+        <li>
+            <a class="compose-link" href="{% url 'signin'%}">
+                <i class="fa-solid fa-box-open"></i> Inbox
+            </a>
+        </li>
+</div>
+ </section>
+
+
+
+
+
+ <form class="body-section" method="POST" action="Email">
+    {% csrf_token %}
+
+    <div class="mail-body">
+        <h2>Email To </h2>
+        <input class="emailinput"type="email" placeholder="name@example.com" name="emailTO">
+
+
+        <h2>Subject</h2>
+        <input class="emailinput"type="text" placeholder="type subject here" name="subject">
+
+        <h2>Message</h2>
+        <input class="emailinput"type="text" placeholder="type message here" name="message">
+
+       
+
+    </div>
+
+    <button class="sendbtn" type="submit" name="sendbtn">
+        SEND
+    </button>
+
+</form>
+
+
+
+
+ 
+</body>
+
+</html>
