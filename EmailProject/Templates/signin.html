@@ -1,0 +1,68 @@
+{% load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Email Sender| Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '\images\Email.png'%}">
+
+
+    <link rel="stylesheet" href="{% static 'css\style.css'%}">
+    <link rel="stylesheet" href="{% static '\fontawesome-free-6.0.0-web\css\all.css'%}">
+
+</head>
+
+<body>
+
+
+    <nav>
+        <ul>
+            <li> 
+                <a class="" href="home">
+                <img class="logo" src="{% static '/\images\Email.png'%}" alt="Logo image">
+               
+            </a>
+        </li>
+        </ul>
+    </nav>
+        
+    <form class="form" method="POST" action="{% url 'signin'%}">
+         {% csrf_token %}
+        <p class="form-title">Sign in to your account</p>
+         <div class="input-container">
+           <input placeholder="Enter email" type="email"%} name="email">
+           <span>
+
+            <i class="fa-regular fa-envelope"></i>
+           </span>
+       </div>
+       <div class="input-container">
+           <input placeholder="Enter password" type="password" name="password">
+ 
+           <span>
+          
+            <i class="fa-solid fa-lock"></i>
+           </span>
+         </div>
+
+         {% for message in messages%}
+         <h2 class="errors">{{message}}</h2>
+         {% endfor%}
+         <h2 class="errors"></h2>
+          <button class="submit" type="submit" name="signinbtn" >
+         Sign in
+       </button>
+ 
+       <p class="signup-link">
+         No account?
+         <a href="{% url 'signup'%}">Sign up</a>
+       </p>
+    </form>
+ 
+</body>
+
+</html>
